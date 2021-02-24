@@ -28,13 +28,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Accueil</a>
+                        <a class="nav-link" href="index.html">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tableau</a>
+                        <a class="nav-link" href="tableaubootstrap.html">Tableau</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="contactbootstrap.html">Contact</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -45,21 +45,46 @@
         </nav>
         <img src="images/promotion.jpg" class=img-fluid alt="Promotion" title="Promotion" width="100%">
         <p>*Ces zones sont obligatoires</p>
-        <legend>Vos coordonn&eacute;es</legend>
-        <form class="row g-3">
-            <label for="nom">Nom*</label><input type="text" name="nom" id="nom" placeholder="Veuillez saisir votre nom" required title="Entrez votre nom (que des caractères entre a et z)"><br>
-            <label for="prenom">Pr&eacute;nom*</label><input type="text" name="prenom" id="prenom" placeholder="Veuillez saisir votre pr&eacute;nom" required title="Entrez votre pr&eacute;nom (que des caractères entre a et z)"><br> Sexe*
-            <div class="form-check form-check-inline">
-                <input id="test" type="radio" name="sexe" value="Feminin"><label class="form-check-label" for="Feminin">F&eacute;minin </label>
-                <input id="tes2t" type="radio" name="sexe" value="Masculin"><label class="form-check-label" for="Masculin">Masculin </label>
+        <form action="#" method="POST">
+            <legend class="h2">Vos coordonn&eacute;es</legend>
+            <form class="row g-3">
+                <label for="nom">Nom*</label><input type="text" class="form-control" name="nom" id="nom" placeholder="Veuillez saisir votre nom" required title="Entrez votre nom (que des caractères entre a et z)"><br>
+                <label for="prenom">Pr&eacute;nom*</label><input type="text" class="form-control" name="prenom" id="prenom" placeholder="Veuillez saisir votre pr&eacute;nom" required title="Entrez votre pr&eacute;nom (que des caractères entre a et z)"><br>
+                <p>Sexe*</p>
+                <input id="feminin" type="radio" name="sexe" value="Feminin" class="form-check-input"> F&eacute;minin
+                <input id="masculin" type="radio" name="sexe" value="Masculin" class="form-check-input"> Masculin
+                <input id="neutre" type="radio" name="sexe" value="Neutre" class="form-check-input"> Neutre
+                <br>
+                <br>
+                <label for="date">Date de Naissance*</label><input type="date" class="form-control" name="ddn" id="date" required title="Entrez votre date de naissance"><br>
+                <label for="codepostal">Code postal*</label><input type="text" class="form-control" name="codepostal" id="codepostal" required title="Entrez votre code postal"><br>
+                <label for="adresse">Adresse</label><input type="text" class="form-control" name="adresse" id="adresse"><br>
+                <label for="ville">Ville</label><input type="text" class="form-control" name="ville" id="ville"><br>
+                <label for="email">Email*</label><input type="text" class="form-control" name="email" id="email" placeholder="dave.loper@afpa.fr" required title="Entrez votre adresse email">
+            </form>
+            <br>
+            <legend class="h2">Votre demande</legend>
+            <p>Sujet*</p>
+            <select class="form-select" aria-label="Default select example">
+            <option disabled selected>Veuillez sélectionner un sujet</option>
+            <option value="commande">Mes commandes</option>
+            <option value="question">Question sur un produit</option>
+            <option value="reclamation">R&eacute;clamation</option>
+            <option value="autres">Autres</option>
+          </select>
+            <br>
+            <p>Votre question*:</p>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
             </div>
             <br>
-            <label for="date">Date de naissance*:</label><input type="date" name="ddn" id="date" required title="Entrez votre date de naissance"><br>
-            <label for="codepostal">Code postal*:</label><input type="text" name="codepostal" id="codepostal" required title="Entrez votre code postal"><br>
-            <label for="adresse">Adresse:</label><input type="text" name="adresse" id="adresse"><br>
-            <label for="ville">Ville:</label><input type="text" name="ville" id="ville"><br>
-            <label for="email">Email*:</label><input type="text" name="email" id="email" placeholder="dave.loper@afpa.fr" required title="Entrez votre adresse email">
+            <input type="checkbox" value="J'accepte le traitement informatique de ce formulaire." required title="Cochez cette case pour continuer"> *J'accepte le traitement informatique de ce formulaire <br>
+            <br>
+            <input type="submit" class="btn btn-dark" href="#" value="Envoyer">
+            <input type="reset" class="btn btn-dark" href="#" value="Annuler">
         </form>
+        <br>
+        <br>
         <footer>
             <ul class="nav bg-dark" style="margin:auto">
                 <li class="nav-item text-muted">
